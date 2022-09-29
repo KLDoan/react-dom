@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function is_acc(str) {
+            regexp = /^[_a-z0-9]{6,}$/;
+            if (regexp.test(str)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //true
+        var acc = '123abc_'
+        console.log(is_acc(acc));
+        acc = '_abc123';
+        console.log(is_acc(acc));
+        acc = '______';
+        console.log(is_acc(acc));
+        //false
+        var acc = '.@'
+        console.log(is_acc(acc));
+        acc = '12345';
+        console.log(is_acc(acc));
+        acc = '1234_';
+        console.log(is_acc(acc));
+    </script>
+</body>
+
+</html>
